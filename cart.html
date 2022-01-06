@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="shortcut icon" href="https://www.nyakaa.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <div id="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="https://cdn.freelogovectors.net/wp-content/uploads/2021/01/nykaa-logo-freelogovectors.net_.png"></a>
+            </div>
+      
+        </div>
+    </div>
+    <!-- Navbar End -->
+    <div class="allItems">
+        <div class="leftSide">
+            <div id="cartItem"></div>
+            <div id="cart_data">
+
+            </div>
+        </div>
+        <div class="rightSide">
+            <div id="pincode"></div>
+            <div id="coupon"></div>
+            <button id="proceedtopay"></button>
+            <div id="order"></div>
+            <div id="shipping"></div>
+            <div id="totalAmount"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    let cart_data = JSON.parse(localStorage.getItem("cart"));
+let data_div = document.querySelector("#cart_data");
+let totalAmount = document.getElementById('totalAmount');
+let proceedToPay = document.getElementById('proceedtopay');
+let cartItem = document.getElementById('cartItem');
+let pincode = document.getElementById('pincode');
+let coupon = document.getElementById('coupon');
+let order = document.getElementById('order');
+let shipping = document.getElementById('shipping');
+let count = 0;
+
+
+let datadiv = document.getElementById("cart_data");
+let total = 0;
+function Cart_items() {
+       
+        cart_data.forEach(function (product) {
+
+                let div = document.createElement("div");
+                let divtxt = document.createElement("span");
+
+                let m_name = document.createElement('b');
+                m_name.innerText = product.name;
+
+                let m_price1 = document.createElement('p');
+                m_price1.innerText = '₹ ' + product.price;
+
+                let image = document.createElement('img');
+                image.src = product.image;
+
+                divtxt.append(m_name, m_price1)
+                div.append(image, divtxt);
+                datadiv.append(div);
+
+                total += Number(product.price);
+
+        });
+       
+        proceedToPay.innerHTML = `Proceed to Pay ₹ ${total} `;
+        proceedToPay.addEventListener('click', function(){
+                location.href = "checkout.html";
+        })
+        totalAmount.innerHTML = `Final Payable ₹ ${total} `;
+        cartItem.innerHTML = `My Cart`
+        pincode.innerHTML = 'Pincode'
+        coupon.innerHTML = 'Apply Code →'
+        order.innerHTML = "Order Summery";
+        shipping.innerHTML = "Shipping Charges - Free"
+}
+
+
+
+Cart_items()
+
+
+</script>

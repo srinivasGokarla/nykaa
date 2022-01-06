@@ -1,0 +1,184 @@
+
+*{
+margin: 0;
+padding: 0;
+font-family: 'Roboto', sans-serif;
+}
+body{
+
+background-color: #f7f7f7;
+
+}
+ul li{
+list-style: none;
+font-family: 'Source Sans Pro', sans-serif;
+color: #3c3c3c;
+}
+a{
+text-decoration: none;
+}
+ h1{
+font-family: 'Roboto', sans-serif;
+}
+h2{
+font-family: 'Roboto', sans-serif;
+}
+p{
+font-family: 'Roboto', sans-serif;
+    color: #3c3c3c;
+}
+#navbar{
+box-sizing: border-box;
+height: 70px;
+background-color:white ;
+width: 100%;
+border-bottom: 1px solid #d3cfcf;
+
+}
+#navbar .container{
+width: 65%;
+display: flex;
+
+margin-left: 350px;
+}
+#navbar .container .logo img {
+
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    justify-content: center;
+    }
+
+#navbar .process{
+display: flex;
+}
+#navbar .process img{
+width:20px;
+}
+#navbar .process p{
+margin: 26px 5px;
+text-transform: uppercase;
+font-size: 16px;
+}
+#navbar .process .cartline{
+margin:32px 5px;
+width: 120px;
+height: 1px;
+background-color:  #5e5d5d;
+}
+
+.allItems{
+margin: 40px ;
+display: flex;
+background-image: url("https://media.istockphoto.com/photos/blur-supermarket-aisle-with-empty-green-shopping-cart-background-picture-id918649490");
+width: 100%;
+opacity:0.9;
+}
+.leftSide{
+width: 50%;
+margin-left: 10%;
+}
+#cartItem{
+box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+background-color: rgb(219, 218, 218);
+margin: 10px 10px 0px;
+font-size: 30px;
+padding: 15px ;
+width: 90%;
+border-radius: 10px;
+}
+#cart_data{
+box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+margin: 0px 10px;
+font-size: 18px;
+padding: 15px;
+background-color: rgb(182, 238, 240);
+width: 90%;
+height: auto;
+border-radius: 5px;
+}
+.rightSide{
+position:fixed;
+margin: 0px  0%  10% 60%;
+width: 23%;
+height: auto;
+}
+#proceedtopay{
+margin: 2px;
+border: 1px solid red;
+font-size: 15px;
+background-color: white;
+}
+#totalAmount{
+background-color: #fff;
+margin: 0px 5px;
+padding: 15px;
+color: #212121;
+}
+#pincode{
+margin: 10px 5px;
+border: 1px solid rgb(219, 243, 6);
+background-color: rgb(198, 219, 11);
+color: #212121;
+padding: 10px;
+border-radius: 8px;
+}
+
+#coupon{
+background-color: rgb(110, 112, 109);
+border: 1px solid rgb(213, 218, 213);
+border-radius: 8px;
+padding: 10px;
+margin: 10px 5px;
+color: #212121;
+
+}
+#proceedtopay{
+background-color: rgb(245, 6, 6);
+border: 1px solid rgb(248, 1, 174);
+border: 2px;
+padding: 13px;
+margin: 10px 5px;
+color: #fff;
+font-size: 16px;
+text-align: center;
+width: 98%;
+border-radius: 8px;
+
+}
+#order{
+background-color: rgb(26, 247, 6);
+margin: 10px 5px 0px;
+padding: 13px;
+font-size:18px;
+border-radius: 8px;
+}
+#shipping{
+
+background-color: #fff;
+margin: 0px 5px;
+padding: 15px;
+color: #212121;
+}
+
+
+#cart_data div {
+    display: grid;
+    grid-template-columns: 20% 70%;
+    grid-gap: 10%; background-color: white;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+#cart_data >div:hover {
+    box-shadow: 0px 0px 18px rgba(33,33,33,.2); 
+  }
+
+#cart_data > div > span {
+    display: grid
+}
+
+#cart_data div  p{
+    font-weight: 600;
+    font-size : 18px;
+}
